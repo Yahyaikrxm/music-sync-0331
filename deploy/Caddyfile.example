@@ -1,0 +1,22 @@
+# Caddy reverse proxy configuration for yxhyai.com (automatic HTTPS via Let's Encrypt).
+# Choose ONE of the two options below and add it to your Caddyfile (usually /etc/caddy/Caddyfile),
+# then reload Caddy: sudo systemctl reload caddy
+
+# -----------------------------------------------------------------------------
+# Option 1 (Recommended): Dedicated subdomain https://blend.yxhyai.com
+# Prerequisite: Add an A/AAAA DNS record for `blend` pointing to your server.
+# -----------------------------------------------------------------------------
+blend.yxhyai.com {
+    reverse_proxy 127.0.0.1:8787
+}
+
+# -----------------------------------------------------------------------------
+# Option 2: Subpath under existing site https://yxhyai.com/blend-api/*
+# `handle_path` strips `/blend-api` before forwarding to 127.0.0.1:8787.
+# -----------------------------------------------------------------------------
+# yxhyai.com {
+#     handle_path /blend-api/* {
+#         reverse_proxy 127.0.0.1:8787
+#     }
+#     # ... your existing yxhyai.com site blocks ...
+# }

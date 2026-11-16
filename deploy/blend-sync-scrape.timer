@@ -1,0 +1,11 @@
+[Unit]
+Description=Weekly Spotify Blend Scraper Timer
+
+[Timer]
+# Runs every Sunday at 09:00 server local time
+OnCalendar=Sun *-*-* 09:00:00
+RandomizedDelaySec=15m
+Persistent=true
+
+[Install]
+WantedBy=timers.target
