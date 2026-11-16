@@ -6,8 +6,8 @@ Wants=network-online.target
 [Service]
 Type=oneshot
 User=yxhyai
-WorkingDirectory=/home/yxhyai/Documents/spotify-blend-sync
-ExecStart=/home/yxhyai/Documents/spotify-blend-sync/.venv/bin/python scripts/trigger_sync.py
+WorkingDirectory=/home/yxhyai/spotify-blend-sync
+ExecStart=/home/yxai/spotify-blend-sync/.venv/bin/python scripts/trigger_sync.py
 # Exit code 2 means session_expired (handled via notifications/API), not a systemd crash
 SuccessExitStatus=0 2
 NoNewPrivileges=true

@@ -17,7 +17,7 @@ Automatically pulls **only your partner's tracks** (Lina) from your shared Spoti
 ## 1. Linux Server Setup (`yxhyai.com`)
 
 ```bash
-cd /home/yxhyai/Documents/spotify-blend-sync
+cd /home/yxhyai/spotify-blend-sync
 chmod +x scripts/setup_linux.sh scripts/trigger_sync.py scripts/mac_login.py
 ./scripts/setup_linux.sh
 ```
@@ -53,7 +53,7 @@ Copy `scripts/mac_login.py` to your Mac (or clone/sync this folder), then run:
 ```bash
 python3 mac_login.py \
   --ssh-target yxhyai@yxhyai.com \
-  --remote-dir /home/yxhyai/Documents/spotify-blend-sync \
+  --remote-dir /home/yxhyai/spotify-blend-sync \
   --run-sync-after \
   --remember
 ```

@@ -67,7 +67,7 @@ def main() -> int:
         "--remote-dir",
         default=saved.get(
             "remote_dir",
-            "/home/yxhyai/Documents/spotify-blend-sync",
+            "/home/yxhyai/spotify-blend-sync",
         ),
         help="Project directory on the Linux server.",
     )
